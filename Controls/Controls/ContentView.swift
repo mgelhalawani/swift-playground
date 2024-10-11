@@ -40,6 +40,18 @@ struct ContentView: View {
             } label: {
                 Label("URL Image", systemImage: "photo")
             }
+            
+            NavigationLink {
+                SampleGeometryReader()
+            } label: {
+                Label("Geometry Reader", systemImage: "dot.square")
+            }
+            
+            NavigationLink {
+                SampleGeometryReader()
+            } label: {
+                Label("Safe Area", systemImage: "inset.filled.square.dashed")
+            }
         }
     }
 }

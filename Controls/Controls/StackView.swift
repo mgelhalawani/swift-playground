@@ -36,7 +36,7 @@ struct StackView: View {
             
             ZStack {
                 Color.yellow
-//                    .edgesIgnoringSafeArea(.all)
+                    .edgesIgnoringSafeArea(.all)
                 
                 VStack{
                     Text("Overlayed Text")
