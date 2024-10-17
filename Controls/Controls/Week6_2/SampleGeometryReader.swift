@@ -42,7 +42,7 @@ struct SampleGeometryReader: View {
             Circle()
                 .fill(.blue)
                 .frame(width: 100)
-                .offset(x: 150, y: 150)
+                .offset(x: 150, y: -150)
                 .tabItem {
                     Label("offset", systemImage: "o.circle")
                 }

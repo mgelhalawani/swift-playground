@@ -14,9 +14,11 @@ struct CustomModifier: View {
     }
 }
 
-struct Highlighted: ViewModifier {
+struct Highlighted {
     var color: Color
-    
+}
+
+extension Highlighted: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
