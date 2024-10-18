@@ -11,7 +11,11 @@ import SwiftUI
 struct SportifyApp: App {
     var body: some Scene {
         WindowGroup {
-            DetailsView()
+            TabView {
+                TeamsListView()
+                
+                SettingsView()
+            }
         }
     }
 }

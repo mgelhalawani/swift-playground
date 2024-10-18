@@ -10,11 +10,12 @@ import SwiftUI
 struct DetailsView: View {
     
     @State var selected: Int = 0
+    let team: Team
     
     var body: some View {
         VStack {
             
-            Image("W3")
+            Image(team.image)
                 .resizable()
                 .frame(width: nil, height: 250)
                 
@@ -26,17 +27,27 @@ struct DetailsView: View {
             }
             .pickerStyle(.segmented)
             
-            if selected == 0 {
-                StatsView()
-            } else if selected == 1 {
-                ActionsView()
+            ScrollView {
+                if selected == 0 {
+                    StatsView()
+                } else if selected == 1 {
+                    ActionsView()
+                }
+                
+                Spacer()
             }
-            
-            Spacer()
         }
+        .navigationTitle("Details")
     }
 }
 
 #Preview {
-    DetailsView()
+    DetailsView(
+        team: Team(
+            name: "MR",
+            description: "MR",
+            score: 400,
+            image: "W3"
+        )
+    )
 }
